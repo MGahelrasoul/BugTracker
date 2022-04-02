@@ -1,0 +1,43 @@
+Software Requirements Specification
+
+Views:
+- home
+- login page
+- tickets index
+- show ticket
+- new ticket
+- edit ticket
+
+Routes: 
+- get("/") 
+- get("/tickets")
+- get("/tickets/new")
+- post("/tickets")
+- get("/tickets/:id")
+- get("/tickets/:id/edit")
+- put("/tickets/:id")
+- delete("/tickets/:id")
+
+Authentication/Security:
+- setup Auth0
+
+Schema / Sort:
+- ID #
+- TYPE: Workorder, Incident, Bug
+- STATUS: New, Assigned, Tested, In Testing, Confirmed, Pending, In Progress, Resolved, Closed, Test Failed, On Hold, Rejected, Cancelled
+- Priority: Low, Medium, High
+- Subject
+- Description
+- Assignee
+- Creator
+- Date Created
+-- Recent Activity: User, created/updated, action done
+
+Ticket Info (Aside?):
+- Overview: Type, Subject, Status, Date Created, Description, Assignee, ETA, Files/Attachments
+- Activity: Recent change, User who made change
+- Possible Email section/ email notifications
+
+Navigation:
+- Search
+- Profile/Login

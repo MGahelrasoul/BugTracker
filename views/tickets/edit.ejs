@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Test Edit</h1>
+    <form action="/tickets/<%= ticket._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="priority">Priority</label>
+            <input type="text" id="priority" name="ticket[priority]" value="<%= ticket.priority%>">
+        </div>
+        <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="ticket[subject]" value="<%= ticket.subject%>">
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="ticket[description]" value="<%= ticket.description%>">
+        </div>
+        <div>
+            <label for="assignee">Assignee</label>
+            <input type="text" id="assignee" name="ticket[assignee]" value="<%= ticket.assignee%>">
+        </div>
+        <button>Update</button>
+    </form>
+    <p><a href="/ticket/<%= ticket._id%>">Go Back</a></p>
+</body>
+</html>
